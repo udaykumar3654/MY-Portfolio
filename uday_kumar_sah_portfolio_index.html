@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uday Kumar Sah — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#2563eb; /* blue */
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background: linear-gradient(180deg,#071028 0%, #081225 100%);
+      color:#e4e8ec;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:24px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#07203a}
+    .brand h1{margin:0;font-size:18px}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:28px}
+    .intro{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(31, 35, 52, 0.6)}
+    .intro h2{margin:0 0 8px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(98, 98, 99, 0.15); /* subtle shadow */
+    transition: all 0.3s ease-in-out;
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted)}
+
+.projects .item {
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(197, 189, 189, 0.01), transparent);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(45, 59, 87, 0.3); /*  blue shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small touches */
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;font-size:12px;background:rgba(255,255,255,0.02);color:var(--muted);}
+    .timeline{list-style:none;padding:0;margin:0}
+    .timeline li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    a.link{color:var(--accent);text-decoration:none}
+
+  </style>
+</head>
+<div class="avatar">
+  <img src="images/uday.jpg" alt="Uday Kumar Sah" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+</div>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+       <div class="avatar">
+  <img src="images/uday.jpg" alt="Uday Kumar Sah" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+</div>
+
+        <div>
+          <h1>Uday Kumar Sah</h1>
+          <small style="color:var(--muted)">BCA Student • Tribhuvan University</small>
+        </div>
+      </div>
+      <nav>
+  <a href="#about">About</a>
+  <a href="#skills"id="skillsLink">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro card">
+        <h2 class="typing-loop"></h2>
+
+<style>
+.typing-loop {
+  font-size: 1.8rem;
+  border-right: 2px solid var(--primary);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 22ch; /* control text width */
+  animation: typing 4s steps(22, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  40% { width: 22ch }
+  60% { width: 22ch }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+</style>
+
+<script>
+  const texts = ["Hi — I’m Uday Kumar Sah", "I’m a Student", "I’m a Developer", "Hi — I’m a Designer"];
+  let index = 0;
+  const el = document.querySelector(".typing-loop");
+
+  function updateText() {
+    el.textContent = texts[index];
+    index = (index + 1) % texts.length;
+  }
+
+  updateText();
+  setInterval(updateText, 4000); // change text every 4s
+</script>
+
+        <p>Undergraduate BCA student from Tribhuvan University, Nepal. I build web interfaces and design digital content that is clear, usable, and visually appealing.</p>
+          <div class="cta">
+    <a class="btn" href="#projects">View My Work</a>
+    <a class="btn secondary" href="#contact">Contact Me</a>
+    <a class="btn" href="assets/Uday-Kumar-Sah-CV.pdf" target="_blank">
+    <i class="fas fa-download"></i> View CV
+    </a>
+</div>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Java</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Photoshop</span>
+          <span class="tag">Canva</span>
+          <span class="tag">Premiere Pro</span>
+          <span class="tag">Ms Office</span>
+          <span class="tag">CCTV Installation</span>
+          <span class="tag">Computer Servicing</span>
+          <span class="tag">PABX System Installation</span>
+        </div>
+        <div class="skills" style="margin-top:12px">
+          <div class="skill"><img src="icons/html.png" alt="HTML" style="width:20px;margin-right:6px">HTML</div>
+          <div class="skill"><img src="icons/css.png" alt="CSS" style="width:20px;margin-right:6px">CSS</div>
+          <div class="skill"><img src="icons/java.png" alt="Java" style="width:20px;margin-right:6px">Java</div>
+          <div class="skill"><img src="icons/figma.png" alt="Figma" style="width:20px;margin-right:6px">Figma</div>
+          <div class="skill"><img src="icons/canva.png" alt="Canva" style="width:30px;margin-right:8px">Canva</div>
+          <div class="skill"><img src="icons/photoshop.png" alt="Photoshop" style="width:20px;margin-right:6px">Photoshop</div>
+          <div class="skill"><img src="icons/premiere pro.png" alt="Premiere Pro" style="width:20px;margin-right:6px">Premiere Pro</div>
+          <div class="skill"><img src="icons/ms office.png" alt="MS Office" style="width:20px;margin-right:6px">MS Office</div>
+          <div class="skill"><img src="icons/CCTV Installation.Jpg" alt="CCTV Installation" style="width:40px;margin-right:8px">CCTV Installation</div>
+          <div class="skill"><img src="icons/Computer Servicing.png" alt="Computer Servicing" style="width:25px;margin-right:6px">Computer Servincing</div>
+          <div class="skill"><img src="icons/PABX.png" alt="PABX System Installation" style="width:40px;margin-right:8px">PABX System Installation</div>
+        </div>
+      </div>
+
+      <aside class="card profile-card" style="font-size:1.1rem;">
+  <h3>Contact</h3>
+  <small class="meta" style="font-size:0.85rem;">
+    Janakpurdham-17, Kanakpatti, Dhanusha, Nepal
+  </small>
+  <div style="margin-top:8px">
+    <div class="meta" style="font-size:0.9rem;">Status: Undergraduate (BCA)</div>
+  </div>
+  <div style="margin-top:12px">
+    <strong style="font-size:1.05rem;">Quick Links</strong>
+    <div style="margin-top:8px;display:flex;flex-direction:column;gap:6px;font-size:1rem;">
+      <a class="link" href="mailto:kartikkumar3654@gmail.com">
+        <i class="fas fa-envelope" style="width:20px;"></i> Email: kartikkumar3654@gmail.com
+      </a>
+      <a class="link" href="tel:+9779807699366">
+        <i class="fas fa-phone" style="width:20px;"></i> Phone: +977 9807699366
+      </a>
+      <a class="link" href="https://wa.me/9779807699366" target="_blank">
+        <i class="fab fa-whatsapp" style="width:20px;color:#3d15f0;"></i> WhatsApp: +977 9807699366
+      </a>
+      <a class="link" href="https://www.linkedin.com/in/uday-kumar-867797357/">
+        <i class="fab fa-linkedin" style="width:20px;"></i> LinkedIn: uday-kumar-867797357
+      </a>
+      <a class="link" href="https://github.com/udaykumar3654">
+        <i class="fab fa-github" style="width:20px;"></i> GitHub: udaykumar3654
+      </a>
+      <a class="link" href="https://www.facebook.com/share/17MMef9uxY/">
+        <i class="fab fa-facebook" style="width:20px;"></i> Facebook: Uday Kumar
+      </a>
+    </div>
+  </div>
+</aside>
+
+
+      </aside>
+    </section>
+
+    <section id="about" class="card" style="margin-bottom:18px">
+      <h3>About Me</h3>
+      <p style="color:var(--muted)">    I am Uday Kumar Sah, — an undergraduate BCA student at Tribhuvan University, Nepal. Passionate about web development, software programming, and creative design. I have hands-on experience with HTML, CSS, Java, PHP, Figma, Photoshop, Canva, Premiere Pro, and MS Office. I enjoy solving problems, learning new technologies, and contributing to projects that make an impact.
+</p>
+    </section>
+
+  <section id="skills" class="grid-container">
+
+  <!-- Technical Skills -->
+  <div class="card skill-card">
+    <h3>Technical Skills</h3>
+    <div class="skills" style="margin-top:12px; display:flex; flex-direction:column; gap:12px;">
+      <div class="skill">
+        <i class="fab fa-html5" style="color:#E34F26; width:24px;"></i> HTML
+        <div class="progress-bar"><div class="progress" data-width="90%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <i class="fab fa-css3-alt" style="color:#1572B6; width:24px;"></i> CSS
+        <div class="progress-bar"><div class="progress" data-width="60%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <i class="fab fa-java" style="color:#007396; width:24px;"></i> Java
+        <div class="progress-bar"><div class="progress" data-width="40%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <i class="fab fa-php" style="color:#777BB4; width:24px;"></i> PHP
+        <div class="progress-bar"><div class="progress" data-width="30%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <i class="fas fa-database" style="color:#4479A1; width:24px;"></i> MySQL
+        <div class="progress-bar"><div class="progress" data-width="50%"></div><span class="progress-percent">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design & Media -->
+  <div class="card skill-card">
+    <h3>Design & Media</h3>
+    <div class="skills" style="margin-top:12px; display:flex; flex-direction:column; gap:12px;">
+      <div class="skill">
+        <img src="icons/figma.png" alt="Figma" style="width:24px; height:24px;"/> Figma
+        <div class="progress-bar"><div class="progress" data-width="60%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/photoshop.png" alt="Photoshop" style="width:24px; height:24px;"/> Photoshop
+        <div class="progress-bar"><div class="progress" data-width="90%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/canva.png" alt="Canva" style="width:30px; height:30px;"/> Canva
+        <div class="progress-bar"><div class="progress" data-width="90%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/premiere pro.png" alt="Premiere Pro" style="width:24px; height:24px;"/> Premiere Pro
+        <div class="progress-bar"><div class="progress" data-width="75%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/ms office.png" alt="MS Office" style="width:24px; height:24px;"/> MS Office
+        <div class="progress-bar"><div class="progress" data-width="95%"></div><span class="progress-percent">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hardware Knowledge -->
+  <div class="card skill-card full-width">
+    <h3>Hardware Knowledge</h3>
+    <div class="skills" style="margin-top:12px; display:flex; flex-direction:column; gap:12px;">
+      <div class="skill">
+        <img src="icons/CCTV Installation.jpg" alt="CCTV Installation" style="width:24px; height:24px;"/> CCTV Installation
+        <div class="progress-bar"><div class="progress" data-width="100%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/Computer Servicing.png" alt="Computer Servicing" style="width:24px; height:24px;"/> Computer Servicing
+        <div class="progress-bar"><div class="progress" data-width="80%"></div><span class="progress-percent">0%</span></div>
+      </div>
+      <div class="skill">
+        <img src="icons/PABX.png" alt="PABX System Installation" style="width:24px; height:24px;"/> PABX System Installation
+        <div class="progress-bar"><div class="progress" data-width="80%"></div><span class="progress-percent">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: 1 / -1; /* span all columns */
+}
+
+/* Optional: make responsive */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* stack all cards */
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 8px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;           /* start at 0 */
+  border-radius: 8px;
+  background: #1E90FF; /* blue fill */
+  transition: width 2s ease-in-out; /* animate width */
+}
+
+.progress-percent {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #0d0707;
+  }
+</style>
+
+<script>
+const progresses = document.querySelectorAll('.progress');
+let activeIntervals = [];
+
+function animateSkills() {
+  // Clear old intervals
+  activeIntervals.forEach(i => clearInterval(i));
+  activeIntervals = [];
+
+  progresses.forEach(progress => {
+    const width = parseInt(progress.getAttribute('data-width'));
+    const percentLabel = progress.nextElementSibling;
+
+    // Reset progress
+    progress.style.transition = 'none'; // remove transition to instantly reset
+    progress.style.width = '0%';
+    percentLabel.textContent = '0%';
+
+    // Force reflow so transition works again
+    progress.offsetWidth; // reflow
+
+    // Re-enable transition and start animation
+    progress.style.transition = 'width 2s ease-in-out';
+    setTimeout(() => {
+      progress.style.width = width + '%';
+
+      // Animate number
+      let current = 0;
+      const interval = setInterval(() => {
+        if (current >= width) clearInterval(interval);
+        else percentLabel.textContent = (++current) + '%';
+      }, 20);
+      activeIntervals.push(interval);
+    }, 50);
+  });
+}
+
+// Intersection Observer for scroll
+const skillsSection = document.getElementById('skills');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) animateSkills();
+  });
+}, { threshold: 0.3 });
+observer.observe(skillsSection);
+
+// Restart on nav click
+document.getElementById('skillsLink').addEventListener('click', e => {
+  e.preventDefault();
+  skillsSection.scrollIntoView({ behavior: 'smooth' });
+  animateSkills();
+});
+</script>
+
+<!-- Project & Case Studies -->
+    <section id="projects" class="card projects">
+      <h3>Projects & Case Studies</h3>
+
+      <div class="item">
+        <h4>Student Result Management System</h4>
+        <div class="meta">Role: Developer • Technologies: Java, MySQL</div>
+        <p class="no-margin">A system used by admins to manage teachers, subjects, and classes. Teachers can upload results and students can view them online.</p>
+        <p class="no-margin">Focus: data organization and usability.</p>
+        <style>
+          .no-margin {
+    color: var(--muted);
+    margin: 0; /* removes space above and below */
+    }
+  </style>
+      </div>
+
+      <div class="item">
+        <h4>Shop Management Software (K-One Mobile)</h4>
+        <div class="meta">Role: Developer/Designer • Technologies: PHP, MySQL, HTML, CSS</div>
+        <p class="no-margin">A lightweight solution for shopkeepers to manage staff, customers, and work reports. Customers can view their records.</p>
+        <p class="no-margin">Focus: simple UI and functionality for small business workflows.</p>
+      </div>
+
+      <div class="item">
+        <h4>Personal Design Works</h4>
+        <div class="meta">Tools: Figma, Photoshop, Canva, Premiere Pro</div>
+        <p style="color:var(--muted);margin-top:8px">UI mockups, social media graphics, and short video edits created as part of coursework and personal practice.</p>
+      </div>
+
+    </section>
+
+    <section id="education" class="grid">
+  <div class="card">
+    <h3>Education</h3>
+    <ul class="timeline" style="margin-top:12px">
+      <li>
+        <strong>Higher Secondary Education (+2) — Public Youth Campus</strong>
+        <div class="meta">Address: Janakpurdham-4, Kadamchowk, Dhanusha, Nepal</div>
+        <div class="meta">Passed in 2021</div>
+      </li>
+      <li>
+        <strong>Bachelor of Computer Applications (BCA) — Tribhuvan University</strong>
+        <div class="meta">Since 2021</div>
+        <div class="meta">Undergraduate (Ongoing)</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Availability</h3>
+    <p style="color:var(--muted);margin-top:6px"> I am — currently available for internships, freelance opportunities, and collaborative projects. Open to learning new technologies and contributing to meaningful projects in web development, design, and software development.</p>
+  </div>
+  
+</section>
+
+   <section id="info-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;flex-wrap:wrap">
+
+  <!-- Contact Card -->
+  <div id="contact" class="card">
+  <h3>Contact</h3>
+  <div class="contact-list" style="margin-top:10px">
+    <div>
+      <i class="fas fa-envelope" style="width:20px;"></i> 
+      Email: <a class="link" href="mailto:kartikkumar3654@gmail.com">kartikkumar3654@gmail.com</a>
+    </div>
+    <div>
+      <i class="fas fa-phone" style="width:20px;"></i> 
+      Phone: <a class="link" href="tel:+9779807699366">+977 9807699366</a>
+    </div>
+    <div>
+      <i class="fab fa-whatsapp" style="width:20px;color:#25D366;"></i> 
+      WhatsApp: <a class="link" href="https://wa.me/9779807699366" target="_blank">Message on WhatsApp</a>
+    </div>
+    <div>
+      <i class="fas fa-map-marker-alt" style="width:20px;"></i> 
+      Location: <a class="link" href="https://maps.app.goo.gl/wncpXj8kMY1EVX3LA">Janakpurdham-17, Kanakpatti, Dhanusha, Nepal</a>
+    </div>
+    <div>
+      <i class="fab fa-linkedin" style="width:20px;color:#0077B5;"></i> 
+      LinkedIn: <a class="link" href="https://www.linkedin.com/in/uday-kumar-867797357/">uday-kumar-867797357</a>
+    </div>
+    <div>
+      <i class="fab fa-github" style="width:20px;color:#000;"></i> 
+      GitHub: <a class="link" href="https://github.com/udaykumar3654">udaykumar3654</a>
+    </div>
+    <div>
+      <i class="fab fa-facebook" style="width:20px;color:#1877F2;"></i> 
+      Facebook: <a class="link" href="https://www.facebook.com/share/17MMef9uxY/">Uday Kumar</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Experience Card -->
+  <div class="card">
+    <h3>Experience</h3>
+    <div class="experience-list" style="margin-top:10px">
+      <div class="item">
+        <h4><i class="fas fa-briefcase" style="color:var(--accent);margin-right:6px;"></i> Aaunu Studio and Computer Care</h4>
+        <div class="meta">Role: Self-Employed • 2022 – Present</div>
+        <ul style="color:var(--muted);margin-top:8px;padding-left:18px;list-style:none">
+          <li><i class="fas fa-tools" style="margin-right:6px;color:#666;"></i> Computer hardware and software repair services.</li>
+          <li><i class="fas fa-desktop" style="margin-right:6px;color:#666;"></i> Installed and configured operating systems and apps.</li>
+          <li><i class="fas fa-camera" style="margin-right:6px;color:#666;"></i> Photo editing, design, & document preparation for client.</li>
+          <li><i class="fas fa-headset" style="margin-right:6px;color:#666;"></i> Customer support and client relationship management.</li>
+          <li><i class="fas fa-cogs" style="margin-right:6px;color:#666;"></i> Troubleshooting, maintenance, and optimization.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    <div style="margin-top:12px">
+  <small style="color:var(--muted)">Or send a message:</small>
+  <form id="contactForm" style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+    <input id="name" required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
+    <input id="email" required placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
+    <textarea id="message" required placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const email = encodeURIComponent(document.getElementById('email').value);
+  const message = encodeURIComponent(document.getElementById('message').value);
+
+  const mailtoLink = `mailto:kartikkumar3654@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+  window.location.href = mailtoLink;
+});
+</script>
+
+    <footer>
+      <div>© <strong>Uday Kumar Sah</strong> — BCA Student • Tribhuvan University</div>
+      <div style="color:var(--muted)">Built with LOVE❤️</div>
+    </footer>
+  </div>
+
+  <script>
+    // small helper: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
