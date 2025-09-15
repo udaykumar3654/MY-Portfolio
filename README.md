@@ -5,7 +5,7 @@ This project showcases my **skills, projects, and experiences** as a BCA student
 
 You can view the live portfolio here:  
 👉 ## 🚀 Live Demo
-[![Live Demo](https://img.shields.io/badge/Demo-udaykumarsah.com.np-blue?style=for-the-badge&logo=google-chrome)](https://udaykumarsah.com.np)
+[Click here to view](https://udaykumarsah.com.np)
 
 ---
 
