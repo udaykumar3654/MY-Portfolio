@@ -43,7 +43,7 @@ I enjoy creating simple yet impactful solutions for real-world problems.
 ---
 
 ## 📬 Contact
-- 📧 **Email:** your-kartikkumar3654@gmail.com  
+- 📧 **Email:** kartikkumar3654@gmail.com  
 - 📱 **Phone/WhatsApp:** +977-9807699366  
 
 ---
