@@ -4,7 +4,7 @@ Welcome to my personal portfolio repository!
 This project showcases my **skills, projects, and experiences** as a BCA student passionate about **Web Development, UI/UX Design, and Software Development**.  
 
 You can view the live portfolio here:  
-👉 [Live Demo](udaykumarsah.com.np)
+👉 [Live Demo] udaykumarsah.com.np
 
 ---
 
