@@ -4,14 +4,14 @@ Welcome to my personal portfolio repository!
 This project showcases my **skills, projects, and experiences** as a BCA student passionate about **Web Development, UI/UX Design, and Software Development**.  
 
 You can view the live portfolio here:  
-👉 [Live Demo] udaykumarsah.com.np
+👉 [Live Demo](udaykumarsah.com.np) 
 
 ---
 
 ## ✨ About Me
 Hi, I’m **Uday Kumar Sah**, a final-year BCA student at **Tribhuvan University**.  
-I’m enthusiastic about **full-stack development, UI/UX design, and building efficient systems**.  
-I enjoy creating simple yet impactful solutions for real-world problems.  
+I’m eUIabout **full-stack development, UI/UX design, and building efficient efficient.  
+I enjoy creating screatingt impactful solutions for real-world problems.  
 
 ---
 
